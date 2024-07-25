@@ -43,6 +43,7 @@ function main()
 
     # print out unsorted contents of dictionary
     println("unsorted")
+    print(output_file, "unsorted\n")
     for gender in keys(pt_gender_count_dict)
         println("$(pt_gender_count_dict[gender])|$gender")
         print(output_file, "$(pt_gender_count_dict[gender])|$gender\n")
@@ -50,6 +51,7 @@ function main()
 
     # print out sorted contents (by value/count) of dictionary
     println("sorted by values")
+    print(output_file, "sorted\n")
     for (count,gender) in sort(collect(zip(values(pt_gender_count_dict),keys(pt_gender_count_dict))), rev=false)
         println("$count|$gender")
         print(output_file, "$count|$gender\n")
