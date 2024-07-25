@@ -8,7 +8,7 @@ function main()
     input_file = open(input_file_name, "r")
 
     # create output file
-    output_file = open("isarkar_program1_output.txt", "w")
+    output_file = open("isarkar_program1_output-jl.txt", "w")
 
 
     # dictionary to keep track of gender counts
