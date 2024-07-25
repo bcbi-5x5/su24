@@ -14,7 +14,7 @@ def main():
     input_file = fileinput.input(input_file_name)
 
     # create output file
-    output_file = open("isarkar_program1_output-py.txt", 'w')
+    output_file = open("5x5ehr_program1_output-py.txt", 'w')
 
     # dictionary to keep track of gender counts
     pt_gender_dict = {}
@@ -44,12 +44,14 @@ def main():
 
     # print non-sorted list by keys of dictionary
     print("unsorted--")
+    print("unsorted...", file = output_file)
     for gender in pt_gender_dict.keys():
         print(str(pt_gender_dict[gender]) + "|" + gender)
         print(str(pt_gender_dict[gender]) + "|" + gender, file = output_file)
 
     # print sorted (by value) of dictionary
     print("sorted by values--")
+    print("sorted...", file = output_file)
     for gender,count in sorted(pt_gender_dict.items(), key=lambda item:item[1], reverse=True):
         print(str(count) + "|" + gender)
         print(str(count) + "|" + gender, file = output_file)
